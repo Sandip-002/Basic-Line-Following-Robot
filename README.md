@@ -19,8 +19,8 @@ This repository contains the code and details for building a line-following robo
 
 ## **Connection Diagram**
 To understand the wiring and connections:
-- ![Insert your connection diagram here](connection_diagram.png)
-- [Click here for detailed circuit](https://example.com/detailed-circuit)
+- ![Basic LFR schematic](https://github.com/user-attachments/assets/cd00b360-109a-41d9-8068-3b55f9f4eef9)
+- [Click here for detailed circuit](https://example.com/detailed-circuit](https://app.cirkitdesigner.com/project/8df65339-e6b2-4c45-b0c9-fccbe6c56bb0))
 
 ---
 

@@ -78,7 +78,7 @@ The code is structured into the following steps:
 
 ### 11. **`analogRd(uint8_t pin_no)`**
    - **Purpose**: This a customized function for taking analog readings.
-   - **Details**: Direct register manipulation has been done to enhance reading speed. Send the analog pin numbers as arguement. (**N.B.**: Do not send A0, A1. Send only numbers. E.g.: analogRd(0); ==> It will read the A0 pin.)
+   - **Details**: Direct register manipulation has been done to enhance reading speed. Send the analog pin numbers as arguement. (**N.B.**: Do not send A0, A1. Send only numbers. E.g.: `analogRd(0);` ==> It will read the A0 pin.)
 ---
 
 ## **How to Use**

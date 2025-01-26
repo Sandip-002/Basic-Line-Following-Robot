@@ -72,6 +72,13 @@ The code is structured into the following steps:
      - Detects a "finish box" where all sensors read black, stopping the motors.
      - To resume, place the robot on a valid line and press the "Run" button.
 
+### 10. **`analogReadSetup()`**: 
+   - **Purpose**: Initializes the register bits for custom analog read function.
+   - **Details**: Always call this function inside the setup. Refer to ATMega328P datasheet for better understanding of the registers.
+
+### 11. **`analogRd(uint8_t pin_no)`**
+   - **Purpose**: This a customized function for taking analog readings.
+   - **Details**: Direct register manipulation has been done to enhance reading speed. Send the analog pin numbers as arguement. (**N.B.**: Do not send A0, A1. Send only numbers. E.g.: analogRd(0); ==> It will read the A0 pin.)
 ---
 
 ## **How to Use**
@@ -84,8 +91,7 @@ The code is structured into the following steps:
 
 ## **Features**
 - **Calibration and Run Modes**: Easily switch between modes for seamless operation.
-- **PID Control**: Ensures smooth and accurate line following.
-- **Fault Detection**: Monitor sensor performance in real time.
+- **Fault Detection**: Check sensor readings in serial monitor in real time.
 - **Finish Box Detection**: Automatically stops when a finish box is detected.
 
 

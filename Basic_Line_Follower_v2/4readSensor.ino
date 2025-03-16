@@ -25,7 +25,7 @@ uint32_t readLine()
 
   for (int i = 0; i < numSensor; i++)
   {
-    sensor[i] = mapC(rawSensor[i], minimum[i], maximum[i], 0, 2026);
+    sensor[i] = mapC(rawSensor[i], minimum[i], maximum[i], 0, 1023);
     if(sensor[i] < 0) sensor[i] = 0;
     if(sensor[i] > 1023) sensor[i] = 1023;
     // keep track of whether we see the line at all
@@ -37,21 +37,21 @@ uint32_t readLine()
     // only average in values that are above a noise threshold
     if (sensor[i] > 50 && sensor[i] < 1100)
     {
-      avg += (long)(sensor[i]) * (i * 1000);
+      avg += (long)(sensor[i]) * (i * 1023);
       sum += sensor[i];
     }
   }
 
   if (!on_line) {
     // If it last read to the left of center, return 0.
-    if (lastValue < (numSensor - 1) * 1000 / 2)
+    if (lastValue < (numSensor - 1) * 1023 / 2)
     {
       return 0;
     }
     // If it last read to the right of center, return the max.
     else
     {
-      return (numSensor - 1) * 1000;
+      return (numSensor - 1) * 1023;
     }
   }
 
